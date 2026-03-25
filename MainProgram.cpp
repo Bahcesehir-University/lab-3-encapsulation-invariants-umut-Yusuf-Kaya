@@ -90,6 +90,7 @@ public:
         if(initialBalance<0){
             throw invalid_argument("error");          
         }
+        owner_=owner;
         balance_=initialBalance;
     }
 
