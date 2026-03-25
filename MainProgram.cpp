@@ -132,10 +132,9 @@ public:
     // Transfer money from this account to another.
     // Throw std::invalid_argument if amount <= 0
     // Throw std::runtime_error if insufficient funds
+    
     void transfer(BankAccount& other, double amount) {
-        if (amount<0){
-            throw invalid_argument("transfer amount must be posıtıve");
-        }
+      
         withdraw(amount);
         other.deposit(amount);
         // TODO: Implement using withdraw() and deposit()
